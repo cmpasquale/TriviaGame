@@ -1,0 +1,28 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Trivia Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css"/>
+</head>
+<body>
+    <div id ="quiz container" class ="container">
+        <div class="title"></div>
+        <div class="question"></div>
+        <label class ="option"><input type ="radio" name="option" value="1"/> <span id="opt1"></span></label>
+        <label class ="option"><input type ="radio" name="option" value="2"/> <span id="opt2"></span></label>
+        <label class ="option"><input type ="radio" name="option" value="3"/> <span id="opt3"></span></label>
+        <label class ="option"><input type ="radio" name="option" value="4"/> <span id="opt4"></span></label>
+        <button id ="next" class="next-btn" onclick="loadNextQuestion();"> Next Question</button>
+    </div>
+    <div id= "result" class ="container result" ></div>
+    
+</body>
+</html>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+ <script src="/assets/javascript/app.js"></script>
