@@ -96,23 +96,23 @@ var opt2 = document.getElementById('opt2');
 var opt3 = document.getElementById('opt3');
 var opt4 = document.getElementById('opt4');
 var totQuestions = question.length
-var nextButton = document.getElementById('next ');
+var nextButton = document.getElementById('next');
 var resultCont = document.getElementById('result');
 
 
-function loadQuestion( questionIndex){
-var q = questions[questionIndex];
-// questionsEL.textContent = (questionIndex + 1 ) = '. ' + q.question;
-opt1.textContent = q.option1
-opt2.textContent = q.option2
-opt3.textContent = q.option3
-opt4.textContent = q.option4
+function loadQuestion(questionIndex){
+var q = question[questionIndex];
+questionsEL.textContent = (questionIndex + 1 ) + ". "+ q.question ;
+opt1.textContent = q.option1;
+opt2.textContent = q.option2;
+opt3.textContent = q.option3;
+opt4.textContent = q.option4;
 };
 
 function loadNextQuestion (){
-    var selectedOption = document.querySelector('input [type=radio]: checked')
+    var selectedOption = document.querySelector('input[type =radio]:checked')
     if (!selectedOption){
-        alert('please selesct you answer')
+        alert('please select you answer')
         return;
     }
 var answer = selectedOption.value;
@@ -121,7 +121,19 @@ if (questions[currentQuestion].answer == answer){
 } 
 selectedOption.checked = false;
  currentQuestion ++;
- if (currentQuestion == totQuestions-1){
+ if (currentQuestion == totQuestions - 1 ){
 nextButton.textContent = 'Finish';
 }
+if (currentQuestion == totQuestions){
+    container.style.display = 'none';
+    resultCont.style.display = ' ';
+    resultCont.textContent = "Your score:  " + score;
+    return;
 }
+loadQuestion(currentQuestion)
+ 
+}
+loadQuestion(currentQuestion);
+
+
+
